@@ -9,9 +9,11 @@ const palette = [
 ];
 
 window.onload = function() {
-  console.log('linked!')
   persistentNotes();
+  checkNotes();
 }
+
+notes = ["mynameischris!"]
 
 function deleteAll() {
   while ( document.getElementById("board").firstChild ) {
@@ -130,8 +132,6 @@ function newSticky(header, body, color) {
       newSticky.style.display = "none";
     }, 700)
     notes[pos] = "";
-    console.log(notes)
-    console.log(pos)
     localStorage.setItem("chrisiscool", JSON.stringify(notes))
   })
 }
@@ -157,6 +157,7 @@ function search() {
   })
 
   postStickies(notes);
+
   setTimeout(function() {
     results()
   }, 333)

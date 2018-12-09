@@ -8,19 +8,30 @@ input:focus {
 	outline: none;
 }
 
+.top {
+	text-align: center;
+}
+
 .button {
 	border-radius: 0.5rem;
 	font-weight: 800;
-	width: 200px;
+	width: 200px; }
+	.button:hover {
+		background-color:#E6E6E5FF;
+	}
+
+.container {
+	text-align: center;
 }
 
 #search {
 	background: #FEFEFEFF;
 	border: 0;
-	width: 200px;
+	width: 20rem;
 	font-size: 1rem;
 	display: block;
-	margin: 5px 0;
+	margin: 0 auto;
+	text-align: center;
 }
 
 .note {
@@ -28,9 +39,9 @@ input:focus {
 	display: inline-block;
 	height: 200px;
 	width: 200px;
-	border-radius: 5px;
 	position: relative;
 	margin: 10px;
+	box-shadow: #333 2px 2px 3px;
 	display: none; }
 	.note .header {
 		text-align: center;
@@ -59,9 +70,11 @@ input:focus {
 	text-align: center;
 	margin: 0 5px;
 	visibility: hidden;
+	z-index: 10;
 }
 
 .colorPicker {
+	z-index: 12;
 	float: left;
 	width: auto;
 	font-size: 0.7rem;
@@ -79,9 +92,13 @@ input:focus {
 	margin: 0 auto;
 	width: auto;
 	cursor: pointer;
+	transform: translateX(-5px);
+	z-index: 10;
+	position: relative;
 }
 
 .delete {
+	z-index: 12;
 	float: right;
 	width: auto;
 	font-size: 0.7rem;
@@ -95,12 +112,8 @@ input:focus {
 	transition: height 1s;
 }
 
-.animate-appear {
-	height: 10%;
-	transition: height 1s;
-}
-
 .selector {
+	z-index: 12;
 	width: 95%;
 	height: 10%;
 	position: absolute;
@@ -140,11 +153,5 @@ input:focus {
 	display: none;
 	width: 33%;
 }
-
-
-
-
-
-
 
 
