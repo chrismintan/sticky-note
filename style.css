@@ -154,4 +154,28 @@ input:focus {
 	width: 33%;
 }
 
+@media screen and (max-width: 500px) {
+	.note {
+		width: 120px;
+		height: 120px; }
+		.note textarea {
+			height: 45%;
+		}
+	.animate-remove {
+		height: 0px;
+		transition: height 1s;
+	}
+}
 
+@media screen and (min-width: 501px) and (max-width: 769px) {
+	.note {
+		width: 150px;
+		height: 150px; }
+		.note textarea {
+			height: 55%;
+		}
+	.animate-remove {
+		height: 0px;
+		transition: height 1s;
+	}
+}

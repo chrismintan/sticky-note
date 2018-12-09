@@ -68,6 +68,7 @@ function newSticky(header, body, color) {
   if ( header != undefined ) {
     document.getElementsByClassName("header")[pos].value = header;
     document.getElementsByClassName("content")[pos].value = body;
+    document.getElementsByClassName("color")[pos].textContent = color;
     newSticky.style.background = palette[color];
   } else {
     // Setting the color of the note to be one of the 7 colors defined prior (only if it's a new note)
