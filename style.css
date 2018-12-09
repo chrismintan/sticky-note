@@ -62,11 +62,16 @@ input:focus {
 }
 
 .colorPicker {
-	position: absolute;
-	bottom: 5px;
-	left: 5px;
+	float: left;
+	width: auto;
 	font-size: 0.7rem;
-	cursor: pointer;
+	cursor: pointer; }
+	.colorPicker:hover {
+		background: rgb(0,0,0,0.2);
+	}
+
+.color {
+	display: none;
 }
 
 .save {
@@ -77,19 +82,39 @@ input:focus {
 }
 
 .delete {
-	position: absolute;
-	bottom: 5px;
-	right: 5px;
+	float: right;
+	width: auto;
 	font-size: 0.7rem;
+	cursor: pointer; }
+	.delete:hover {
+		background: rgb(0,0,0,0.2);
+	}
+
+.animate-remove {
+	height: 0px;
+	transition: height 1s;
 }
 
+.animate-appear {
+	height: 10%;
+	transition: height 1s;
+}
 
+.selector {
+	width: 95%;
+	height: 10%;
+	position: absolute;
+	visibility: hidden;
+	display: flex;
+	display: -webkit-flex; /*Safari*/
+}
 
-
-
-
-
-
+.selector span {
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	cursor: pointer;
+}
 
 
 

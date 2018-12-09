@@ -14,33 +14,11 @@ window.onload = function() {
 }
 
 function deleteAll() {
-  console.log("Deleting")
-}
-
-function search() {
-  let input = document.getElementById("search").value;
-
-  // Looping through array of notes. If string is found, mark them out
-  for ( let i = 0; i < notes.length; i++ ) {
-    if ( notes[i] != "mynameischris!" && notes[i] != "" ) {
-      if ( notes[i].header.includes(input) || notes[i].content.includes(input) ) {
-        notes[i].match = true;
-      } else {
-        notes[i].match = false;
-      }
-    }
-  }
   while ( document.getElementById("board").firstChild ) {
     document.getElementById("board").removeChild(document.getElementById("board").firstChild);
   }
-  notes.sort(function(a,b) {
-    return b.match - a.match;
-  })
-
-  postStickies(notes);
-  setTimeout(function() {
-    results()
-  }, 333)
+  notes = ["mynameischris!"];
+  localStorage.clear();
 }
 
 function persistentNotes() {
@@ -153,4 +131,44 @@ function newSticky(header, body, color) {
     console.log(pos)
     localStorage.setItem("chrisiscool", JSON.stringify(notes))
   })
+}
+
+function search() {
+  let input = document.getElementById("search").value;
+
+  // Looping through array of notes. If string is found, mark them out
+  for ( let i = 0; i < notes.length; i++ ) {
+    if ( notes[i] != "mynameischris!" && notes[i] != "" ) {
+      if ( notes[i].header.includes(input) || notes[i].content.includes(input) ) {
+        notes[i].match = true;
+      } else {
+        notes[i].match = false;
+      }
+    }
+  }
+  while ( document.getElementById("board").firstChild ) {
+    document.getElementById("board").removeChild(document.getElementById("board").firstChild);
+  }
+  notes.sort(function(a,b) {
+    return b.match - a.match;
+  })
+
+  postStickies(notes);
+  setTimeout(function() {
+    results()
+  }, 333)
+}
+
+// Function to animate search results
+function results() {
+  let input = document.getElementById("search").value;
+  for ( let i = 0; i < document.getElementsByClassName("note").length; i++ ) {
+    if ( notes[i] != "mynameischris!" && notes[i] != "" ) {
+      if ( notes[i].header.includes(input) || notes[i].content.includes(input) ) {
+        document.getElementsByClassName("note")[i].classList.add("enlarge");
+      } else {
+        document.getElementsByClassName("note")[i].classList.add("shrink");
+      }
+    }
+  }
 }
