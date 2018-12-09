@@ -35,8 +35,11 @@ function persistentNotes() {
       notes.splice(i,1);
     }
   }
+  postStickies(notes);
+}
 
-  // Appending notes to board
+// Function to append notes to board
+function postStickies(notes) {
   for ( let i = 0; i < notes.length; i++ ) {
     if ( notes[i] != "mynameischris!" && notes[i] != null ) {
       newSticky(notes[i].header, notes[i].content, notes[i].color);

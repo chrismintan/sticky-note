@@ -116,7 +116,30 @@ input:focus {
 	cursor: pointer;
 }
 
+.shrink {
+	-webkit-transform: scale(0.95);
+	-ms-transform: scale(0.95);
+	transform: scale(0.95);
+	transition: 0.5s;
+	opacity: 0.4;
+}
 
+.enlarge {
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+	transition: 0.5s;
+}
+
+.notify {
+	font-size: 0.7rem;
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	display: none;
+	width: 33%;
+}
 
 
 
