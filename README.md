@@ -1,3 +1,26 @@
+# Sticky Notes
+[**Sticky Notes**](https://chrismintan.github.io/sticky-note/) as the name suggests, is a note keeping application modelled after the Microsoft Windows application of the same name. These sticky notes are persistent in nature meaning that your created notes will be there the next time you open up the app! This app uses HTML5's localStorage feature to store the notes data and your notes will persist as long as your local storage is not cleared!
+
+### Getting started
+- Clone this repository to your local drive
+```
+$ git clone https://github.com/chrismintan/sticky-note.git
+```
+- Navigate to the folder which contains the cloned repository
+- Open up index.html
+- Enjoy!
+
+## Features
+- Click the "Add note" button to add a new note
+- Fill up the header and content of the note
+- You may change the color of the sticky note by clicking on the color button
+- Be sure to save the notes before you close your browser as the notes do not save automatically
+- To search for a particular note, enter any keywords into the search bar
+- The search is for both headers and content bodies
+
+## Browser Support
+Chrome, Safari and IE (>=10)
+
 # Sticky Note Application - Front-End assignment
 
 This page contains description and requirements for a Front-End assignment on Vanilla **Javascript**, **HTML5**, **CSS3**.
