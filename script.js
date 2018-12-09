@@ -25,7 +25,7 @@ function newSticky() {
   let template = document.getElementById('template');
   let newSticky = template.cloneNode(true);
   newSticky.style.display = "inline-block";
-  newSticky.style.background = palette.green;
+  newSticky.style.background = palette[1];
 
   // Appending sticky to board
   let board = document.getElementById('board');

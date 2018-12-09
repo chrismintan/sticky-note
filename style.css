@@ -5,7 +5,7 @@ body {
 }
 
 input:focus {
-	outline: none;9
+	outline: none;
 }
 
 .button {
@@ -27,13 +27,18 @@ input:focus {
 	background: #FFFF88;
 	display: inline-block;
 	height: 200px;
-	width: 200px; }
+	width: 200px;
+	border-radius: 5px;
+	position: relative;
+	display: none; }
 	.note .header {
+		text-align: center;
 		border: 0;
 		width: 99%;
 		font-size: 1.2rem;
 		font-weight: bold;
-		background-color: rgb(0,0,0,0.1); }
+		background-color: rgb(0,0,0,0.1)
+	}
 	.note textarea {
 		font-size: 0.7rem;
 		background: transparent;
@@ -44,15 +49,38 @@ input:focus {
 		width: 80%;
 		height: 65%;
 		/*border-color: transparent;*/
-		resize: none; }
+		resize: none;
 	}
 
-
-.note .header {
-	font-size: 1.2rem;
-	font-weight: bold;
+.colorPicker {
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	font-size: 0.7rem;
+	cursor: pointer;
 }
 
-.note .content {
+.delete {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
 	font-size: 0.7rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
