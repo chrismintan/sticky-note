@@ -5,7 +5,7 @@ body {
 }
 
 input:focus {
-	outline: none;
+	outline: none;9
 }
 
 .button {
@@ -24,19 +24,29 @@ input:focus {
 }
 
 .note {
-	background: yellow;
+	background: #FFFF88;
 	display: inline-block;
 	height: 200px;
-	width: 200px;
-	padding: 5px;
-	border-radius: 5px;
-}
+	width: 200px; }
+	.note .header {
+		border: 0;
+		width: 99%;
+		font-size: 1.2rem;
+		font-weight: bold;
+		background-color: rgb(0,0,0,0.1); }
+	.note textarea {
+		font-size: 0.7rem;
+		background: transparent;
+		padding: 10px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+		height: 65%;
+		/*border-color: transparent;*/
+		resize: none; }
+	}
 
-.note input {
-	background: transparent;
-	border: 0;
-	padding: 5px;
-}
 
 .note .header {
 	font-size: 1.2rem;
