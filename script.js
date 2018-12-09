@@ -175,3 +175,23 @@ function results() {
     }
   }
 }
+
+// Function to check if sticky has been saved
+function checkNotes() {
+  for ( let i = 0; i < document.getElementsByClassName("note").length; i++ ) {
+    if ( notes[i] != "mynameischris!" && notes[i] != "" && notes[i] != undefined ) {
+      if ( document.getElementsByClassName("header")[i].value != notes[i].header || document.getElementsByClassName("content")[i].value != notes[i].content || document.getElementsByClassName("color")[i].textContent != notes[i].color ) {
+        document.getElementsByClassName("notify")[i].style.display = "none";
+      } else {
+        document.getElementsByClassName("notify")[i].style.display = "block";
+      }
+    }
+  }
+}
+
+document.onkeydown = function() {
+  checkNotes();
+}
+
+
+
