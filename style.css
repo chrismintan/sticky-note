@@ -3,3 +3,46 @@ body {
 	padding: 0 1.0rem;
 	font-family: Helvetica, sans-serif;
 }
+
+input:focus {
+	outline: none;
+}
+
+.button {
+	border-radius: 0.5rem;
+	font-weight: 800;
+	width: 200px;
+}
+
+#search {
+	background: #FEFEFEFF;
+	border: 0;
+	width: 200px;
+	font-size: 1rem;
+	display: block;
+	margin: 5px 0;
+}
+
+.note {
+	background: yellow;
+	display: inline-block;
+	height: 200px;
+	width: 200px;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.note input {
+	background: transparent;
+	border: 0;
+	padding: 5px;
+}
+
+.note .header {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.note .content {
+	font-size: 0.7rem;
+}
