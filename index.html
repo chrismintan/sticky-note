@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Meta tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <!-- JS Script -->
+  <script src="script.js" type="text/javascript"></script>
+
+  <title>Sticky notes!</title>
+</head>
+
+<body>
+  <header>
+    <h1>Sticky Notes!</h1>
+
+
+    <!-- Add note -->
+    <button class="button" onclick="addNote()">Add note [+]</button>
+    <br />
+
+    <!-- Delete all notes -->
+    <button class="button" onclick="deleteAll()">Delete all notes [-]</button>
+    <br />
+
+    <hr />
+    <!-- Search bar -->
+    <input id="search" placeholder="Search..." onkeyup="search()" />
+    <!-- Demo note -->
+    <div class="note">
+      <!-- Header / Label -->
+      <input class="header" placeholder="Title..." />
+      <br />
+      <input class="content" placeholder="Take a note..." />
+    </div>
+
+  </header>
+</body>
+</html>
